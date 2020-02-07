@@ -1,0 +1,50 @@
+                                                     Start TweenMax 
+
+================
+Basic setup
+================
+add this link
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+
+================
+Basic Structure
+================
+TweenMax.to() => Animation start form
+TweenMax.from() => Opposite Animation
+
+----------------
+Elements and Parameters:
+----------------
+TweenMax.to('target-element', animation-duration, {parameter-for-animation});
+----------
+With Data:
+----------
+TweenMax.to('.box', 1, {left:100, opacity:1});
+================
+Example:
+================
+html
+----------------
+<div class="box"></div>
+----------------
+css
+----------------
+.box{
+ width:50px;
+ height:50px;
+ background-color:#252525;
+ border-radius: 10px;
+
+ position: relative;
+ opacity: 0;
+ 
+}
+----------------
+js
+----------------
+<script type="text/javascript">
+  TweenMax.to('.box',1, {
+    left:100,
+    opacity:1
+  })
+</script>
