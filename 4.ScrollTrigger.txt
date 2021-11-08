@@ -3,7 +3,7 @@ Scroll Trigger
 1.introduce ScrollTrigger
 2.Toggle actions
 3.Start & End & Scrub
-
+4.toggleClass
 ------------------
 html
 ---------
@@ -76,13 +76,14 @@ none
 gsap.registerPlugin(ScrollTrigger);
 gsap.to(".c",{
 scrollTrigger:{
-  trigger:".c",
-  //start:"top center",
-  start:"50px 80%",
-  bottom:"bottom top",
-  markers:true,
-  scrub:1, //true & second
-  toggleActions:"restart pause reverse pause"
+	trigger:".c",
+	start:"top bottom",
+	//start:"50px 80%",
+	bottom:"top bottom",
+	//bottom:"50px 80%",
+	markers:true,
+	scrub:1, //true & 1 use to bring element with scroll
+	toggleActions:"restart pause reverse pause"
 },
 x:200,
 ease:"none",
@@ -91,9 +92,21 @@ duration:3
 });
 
 
-
-
-
+---------
+4.toggleClass
+---------
+gsap.registerPlugin(ScrollTrigger);
+gsap.to(".c",{
+scrollTrigger:{
+  trigger:".c",
+  toggleActions:"restart pause reverse pause"
+},
+x:200,
+ease:"none",
+rotation:360,
+toggleClass: "active",
+duration:3
+});
 
 
 
