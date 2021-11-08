@@ -1,0 +1,29 @@
+Gsap Basic
+-----------------
+1. Setup url:
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+
+-----------------
+Example1:
+-----------------
+html
+---------
+<div class="box a">a</div>
+<style>
+  .box{
+  width: 100px;
+  height: 100px;
+  background: #ddd;
+  margin-bottom: 300px;
+  position: relative;
+}
+</style>
+
+---------
+gsap code
+---------
+gsap.to(".a",{
+x:400,
+rotation:360,
+duration:3
+});
