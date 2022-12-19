@@ -13,10 +13,18 @@ var bigDream_tl = gsap.timeline({paused: true});
 ScrollTrigger.create({
   trigger: ".section-bigIdeas-h",
   scrub: true, //1 for smooth animation
-  pin: true,
+  pin: true, //stuck the section ".section-bigIdeas-h" and animation happening
   start: "50% 50%",
   end:"350% top", //default value "bottom top"
   //markers: true,
   //scroller: ".scroll-container",
   animation:  bigDream_tl
 });
+
+
+
+----------- remove error -----------------
+gsap.config({
+  nullTargetWarn: false,
+});
+----------- /remove error -----------------
